@@ -10,6 +10,7 @@ import (
 	"quadstingray/speedtest-influxdb/model"
 	"sort"
 	"time"
+	"errors"
 )
 
 func main() {
@@ -114,5 +115,5 @@ func runTest(settings model.Settings) (model.SpeedTestStatistics, error) {
         	result := model.SpeedTestStatistics{clientInformations, server, server.Latency, dmbps, umbps}
         	return result, nil
         }
-        return nil, "Error choosing server"
+        return model.SpeedTestStatistics{}, errors.New("Error choosing server")
 }
