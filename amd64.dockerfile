@@ -1,3 +1,4 @@
+
 FROM golang:alpine AS build-env
 
 # Set go bin which doesn't appear to be set already.

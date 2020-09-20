@@ -1,0 +1,21 @@
+image: jykke/speedtest-influxdb:latest
+manifests:
+  - image: jykke/speedtest-influxdb:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: jykke/speedtest-influxdb:arm32v5
+    platform:
+      architecture: arm
+      os: linux
+      variant: v5
+  - image: jykke/speedtest-influxdb:arm32v7
+    platform:
+      architecture: arm
+      os: linux
+      variant: v7
+  - image: jykke/speedtest-influxdb:arm64v8
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
