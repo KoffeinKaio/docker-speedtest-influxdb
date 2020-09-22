@@ -1,4 +1,4 @@
-FROM --platform=linux/arm32/v6 golang:alpine AS build-env
+FROM arm32v6/golang:alpine AS build-env
 
 # Set go bin which doesn't appear to be set already.
 ENV GOBIN /go/bin
@@ -23,7 +23,7 @@ RUN dep ensure
 RUN go build -o speedtestInfluxDB *.go
 
 # final stage
-FROM alpine
+FROM --platform=linux/arm/v6 alpine
 WORKDIR /app
 
 MAINTAINER QuadStingray <docker-speedtest@quadstingray.com>

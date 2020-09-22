@@ -4,16 +4,16 @@ manifests:
     platform:
       architecture: amd64
       os: linux
-  - image: jykke/speedtest-influxdb:arm32v6
-    platform:
-      architecture: arm
-      os: linux
-      variant: v6
-  - image: jykke/speedtest-influxdb:arm32v7
-    platform:
-      architecture: arm
-      os: linux
-      variant: v7
+#  - image: jykke/speedtest-influxdb:arm32v6
+#    platform:
+#      architecture: arm
+#      os: linux
+#      variant: v6
+#  - image: jykke/speedtest-influxdb:arm32v7
+#    platform:
+#      architecture: arm
+#      os: linux
+#      variant: v7
   - image: jykke/speedtest-influxdb:arm64v8
     platform:
       architecture: arm64
