@@ -1,4 +1,4 @@
-FROM golang:alpine AS build-env
+FROM --platform=linux/arm32/v6 golang:alpine AS build-env
 
 # Set go bin which doesn't appear to be set already.
 ENV GOBIN /go/bin
